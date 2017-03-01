@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": ["es5", "es6", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
@@ -10,12 +10,15 @@
     "removeComments": false,
     "noImplicitAny": false,
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "dist"
   },
   "files": [
     "angular2-qrcode.ts"
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "genDir": "compiled"
+  }
 }

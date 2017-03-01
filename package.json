@@ -2,12 +2,16 @@
   "name": "angular2-qrcode",
   "version": "1.0.5",
   "description": "An Angular 2 component that generates a QR Code.",
-  "main": "angular2-qrcode.js",
+  "main": "dist/angular2-qrcode.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SuperiorJT/angular2-qrcode.git"
   },
-  "scripts": { },
+  "scripts": {
+    "build:system": "tsc -p tsconfig.json",
+    "build:cjs": "ngc -p tsconfig.cjs.json",
+    "build": "npm run build:cjs && npm run build:system"
+  },
   "keywords": [
     "qrcode",
     "qr",
@@ -18,14 +22,18 @@
     "ng2"
   ],
   "dependencies": {
-    "qrcode-generator": "^1.0.0"
+    "qrcode-generator": "^1.0.0",
+    "rxjs": "^5.2.0"
   },
   "peerDependencies": {
     "@angular/core": "^2.0.0"
   },
   "devDependencies": {
+    "@angular/compiler": "^2.4.8",
+    "@angular/compiler-cli": "^2.4.8",
     "@angular/core": "^2.0.0",
-    "typescript": "^2.0.0"
+    "@angular/platform-server": "^2.4.8",
+    "typescript": "^2.2.1"
   },
   "typings": "angular2-qrcode.d.ts",
   "author": "superiorjt <superiorjt@gmail.com>",
